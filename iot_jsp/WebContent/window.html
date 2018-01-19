@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<input type="button" value="click me" onclick="clickCount()">
+	<input type="button" value="나와라 자식창" onclick="openchaildwindow()">
+</body>
+	
+<script >
+function openchaildwindow(){
+	window.open("https://www.google.co.kr");
+}
+
+var cnt=1;
+function clickCount(){
+	alert(cnt++);
+}
+</script>
+
+</html>

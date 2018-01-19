@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script >
+function movePage(url){
+	alert(url);
+	/*location.href="./target.html";*/
+}
+function setstyle(obj,init){
+	if(init){
+		obj.style.cssText="";
+	}else{
+	obj.style.cssText = "cursor:pointer;";
+	obj.style.cssText += "color:red";
+	obj.style.cssText += "text-decoration:underline"
+}
+}
+
+
+function setEvent(){	
+	var objs = document.getElementsByTagName("div");
+	for(var obj of objs){
+		if(obj.getAttribute("data-url")){
+			obj.onclick = movePage.bind(null,obj.getAttribute("data-url"));
+			obj.onmouseover=setstyle.bind(null,obj,false);
+			obj.onmouseout=setstyle.bind(null,obj,true);
+		}
+	}
+}
+
+</script>
+
+<body onload=  "setEvent()" >
+<div> 난data-url아니야</div>
+<div data-url="http://localhost/html/target.html">url이동</div><br>
+<div data-url="/html/target.html">절대걍로를 이용한</div><br>
+<div data-url="./target.html">상대결로를 이용한1</div><br>
+<div data-url="target.html">상대경로를이용한 2</div><br>
+<div data-url="../target.html">상대결로를이용한 상위폴더이동</div><br>
+<div data-url="/target.html">절대경로를 이용한 상위폴더 이동</div>
+</body>
+</html>

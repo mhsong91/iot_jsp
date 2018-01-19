@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script >
+function readtxet(){
+	var ipobj = document.getElementById("id1");
+	alert(ipobj.value);
+	document.getElementById("resurt_div").innerHTML +=ipobj.value;
+}
+</script>
+<body>
+<div id="resurt_div" style="background-color:red">1</div>
+<input type="text" id="id1" value="test">
+<input type="button" value="readtxet" onclick="readtxet()">
+</body>
+</html>

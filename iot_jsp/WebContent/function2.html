@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script >
+var tt ="123";
+function test(str){
+	alert(str+"test");
+}
+
+test(tt);
+
+var func =function(num1,num2,op){
+	var add= function(){
+	return num1+num2;	
+	}
+	var gogo= function(){
+		return num1*num2;
+	}
+	this.cal=function(){
+		if(op=="+"){
+			return add();
+		}else if (op=="*"){
+			return gogo();
+		}
+	}
+	
+}
+var f = new func(1,2,"*");
+alert(f.cal());
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

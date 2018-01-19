@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+function makegogodan(){
+var num1obj=parseInt(document.getElementById("num1").value);
+var num2obj=parseInt(document.getElementById("num2").value);
+for(var i=1;i<=num1obj;i++){
+	for(var j=1;j<=num2obj;j++){
+		document.write(i+"x"+j+"="+(i*j)+",");		
+	}document.write("<br>");
+}
+
+	
+}
+
+</script>
+<body>
+<div id="result_div"></div>
+<input type="text" id="num1"><br>
+<input type="text" id="num2"><br>
+<input type="button" value="구구단 ㄱ" onclick="makegogodan()">
+</body>
+</html>

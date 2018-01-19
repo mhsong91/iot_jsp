@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+var rnum=Math.floor(Math.random()*6)+1;
+	
+
+	function good(id){
+		if(document.getElementById(id).id==rnum){
+			alert("당첨이요");
+			alert(rnum);
+		}else{
+			alert("꽝이료");
+		}
+		
+		
+	}
+		
+	
+</script>
+<body>
+<input type="button" id="1" onclick="good(id)" value="클릭해라">
+<input type="button" id="2" onclick="good(id)" value="클릭해라">
+<input type="button" id="3" onclick="good(id)" value="클릭해라">
+<input type="button" id="4" onclick="good(id)" value="클릭해라">
+<input type="button" id="5" onclick="good(id)" value="클릭해라">
+<input type="button" id="6" onclick="good(id)" value="클릭해라">
+</body>
+</html>
